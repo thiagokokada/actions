@@ -32,8 +32,11 @@ workflow "on review" {
 
 action "nsorg" {
   uses = "m45t3r/actions/nsorg@master"
-  # Enable autofix on push
-  # args = ["autofix"]
+  # Enable autofix on push and exclude a broken file from lint
+  # args = [
+  #   "autofix",
+  #   "--exclude src/my_project/broken_file.clj"
+  # ]
   # Used for pushing changes for `fix` comments on review
   secrets = ["GITHUB_TOKEN"]
 }
