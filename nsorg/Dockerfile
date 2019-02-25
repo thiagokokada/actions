@@ -9,7 +9,7 @@ LABEL "repository"="http://github.com/m45t3r/actions"
 LABEL "homepage"="http://github.com/m45t3r/actions"
 LABEL "maintainer"="Thiago Kenji Okada <thiagokokada@gmail.com>"
 
-RUN clojure -Sdeps '{:deps {leiningen {:mvn/version "2.9.0"} lein-nsorg {:mvn/version "0.2.0"}}}' -e ":ok"
+RUN clojure -Sdeps '{:deps {leiningen {:mvn/version "2.9.0"} lein-nsorg {:mvn/version "0.3.0"}}}' -e ":ok"
 
 RUN apk --no-cache add \
   curl~=7 \
