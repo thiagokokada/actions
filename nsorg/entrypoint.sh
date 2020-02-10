@@ -25,6 +25,5 @@ setup_extra_args() {
   done
 }
 
-nsorg --help
 setup_extra_args ${@:2}
 _lint_and_fix_action nsorg "${1}"
