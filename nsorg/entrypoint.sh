@@ -7,11 +7,8 @@ source /lib.sh
 declare -a EXTRA_ARGS=()
 
 nsorg() {
-  # Ignore project.clj file since this would make lein to download project deps
-  mv project.clj project.clj.bkp
-  clojure -Sdeps '{:deps {leiningen {:mvn/version "2.9.0"} lein-nsorg {:mvn/version "0.3.0"}}}' \
-    -m leiningen.core.main nsorg "${@}" "${EXTRA_ARGS[@]}"
-  mv project.clj.bkp project.clj
+  clojure -Sdeps '{:deps {nsorg-cli {:mvn/version "0.3.1"}}}' \
+    -m nsorg.cli "${@}" "${EXTRA_ARGS[@]}"
 }
 
 fix() {
