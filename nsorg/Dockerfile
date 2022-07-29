@@ -14,7 +14,7 @@ RUN clojure -Sdeps '{:deps {nsorg-cli {:mvn/version "0.3.1"}}}' -e ":ok"
 RUN apk --no-cache add \
   curl~=7 \
   jq~=1.6 \
-  bash~=4 \
+  bash~=5 \
   git~=2
 
 COPY lib.sh /lib.sh
